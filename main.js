@@ -46,8 +46,8 @@ filter.addEventListener("change", () => {
     ele.innerHTML = "";
     for (let i = 0; i < products.length; i++) {
       let div = document.createElement("div");
-      div.innerHTML = `  <div class="flex p-4 items-end w-80 h-96 bg-blue-700">
-      <div class="border-t flex items-center  grid grid-cols-2 text-white font-serif  w-80 border-blac h-20 ">
+      div.innerHTML = `  <div class="flex rounded-lg transform hover:scale-110 cursor-pointer transition-transform duration-300 ease-in-out items-end  w-86 h-96 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 p-1">
+      <div class="border-t flex items-center  grid grid-cols-2 text-white font-serif  w-80 border-white h-20 ">
        <p>Name: ${products[i].name}</p>
        <p>Category: ${products[i].category}</p>
        <p>Price: ${products[i].price}</p>
