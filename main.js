@@ -42,6 +42,28 @@ let filter = document.getElementById("filter");
 console.log(filter.value);
 console.log(filter);
 
+filter.addEventListener("change", () => {
+    ele.innerHTML = "";
+    for (let i = 0; i < products.length; i++) {
+      let div = document.createElement("div");
+      div.innerHTML = `  <div class="flex p-4 items-end w-80 h-96 bg-blue-700">
+      <div class="border-t flex items-center  grid grid-cols-2 text-white font-serif  w-80 border-blac h-20 ">
+       <p>Name: ${products[i].name}</p>
+       <p>Category: ${products[i].category}</p>
+       <p>Price: ${products[i].price}</p>
+       <p>${products[i].available?'Availabe':'Not available'}</p>
+      </div>
+      </div>`
+  
+      console.log(filter.value === products[i].category);
+      if (filter.value === products[i].category) {
+        ele.appendChild(div);
+      } else if (filter.value == "all") {
+        ele.appendChild(div);
+      }
+    }
+  });
+
 for (let i = 0; i < products.length; i++) {
   let div = document.createElement("div");
   div.innerHTML = `  <div class="flex rounded-lg items-end  w-80 h-96 bg-blue-700">
