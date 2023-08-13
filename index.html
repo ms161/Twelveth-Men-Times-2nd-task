@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="container ">
+    <div class="text-center text-2xl p-4 bg-red-600 font-serif ">
+
+        <label for="filter">Filter:</label>
+        <select class="text-2xl " name="" id="filter">
+            <option value="all">All Products</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Books">Books</option>
+            <option value="Home & Kitchen">Home & kitchen</option>
+            <option value="Toys & Games">Toys & games</option>
+        </select>
+    </div>
+   <div id="items" class="grid grid-cols-1 mt-7 place-items-center md:grid-cols-2 xl:grid-cols-3   flex gap-6">
+   </div>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
